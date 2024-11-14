@@ -1,21 +1,23 @@
 #include <stdio.h>
+
+void printArray(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+
+        arr[i] *= 2;
+        printf("After adjustment: %d\t", arr[i]);
+    }
+}
+
 int main()
 {
-    printf("What is your favourite food?");
+    int slicesEachMeal[] = {4, 5, 6, 7, 8};
+    int numMeals = sizeof(slicesEachMeal) / sizeof(slicesEachMeal[0]);
 
-    char favFood[5];
-    scanf("%4s", favFood);
+    printf("Number of meals: %d\n", numMeals);
 
-    printf("Your favourite food is %s", favFood);
-
-    // get length of a string
-    int charCount = 0;
-
-    while (favFood[charCount] != '\0')
-    {
-        charCount++;
-    }
-    printf("The length of your favourite food is %d", charCount);
+    printArray(slicesEachMeal, numMeals);
 
     return 0;
 }
