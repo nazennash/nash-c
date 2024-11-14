@@ -1,15 +1,21 @@
 #include <stdio.h>
 int main()
 {
-    int radius;
+    printf("What is your favourite food?");
 
-    printf("Enter the radius: ");
+    char favFood[5];
+    scanf("%4s", favFood);
 
-    scanf("%d", &radius);
+    printf("Your favourite food is %s", favFood);
 
-    int x = (radius * radius) * 3.14;
+    // get length of a string
+    int charCount = 0;
 
-    printf("Answer: %d", x);
+    while (favFood[charCount] != '\0')
+    {
+        charCount++;
+    }
+    printf("The length of your favourite food is %d", charCount);
 
     return 0;
 }
