@@ -1,23 +1,17 @@
 #include <stdio.h>
 
-void printArray(int arr[], int size)
+struct rectangle
 {
-    for (int i = 0; i < size; i++)
-    {
-
-        arr[i] *= 2;
-        printf("After adjustment: %d\t", arr[i]);
-    }
-}
+    int length;
+    int width;
+};
 
 int main()
 {
-    int slicesEachMeal[] = {4, 5, 6, 7, 8};
-    int numMeals = sizeof(slicesEachMeal) / sizeof(slicesEachMeal[0]);
+    struct rectangle r1 = {10, 20};
+    struct rectangle r2 = {30, 40};
 
-    printf("Number of meals: %d\n", numMeals);
-
-    printArray(slicesEachMeal, numMeals);
-
+    printf("Area of r1: %d\n", r1.length * r1.width);
+    printf("Area of r2: %d\n", r2.length * r2.width);
     return 0;
 }
